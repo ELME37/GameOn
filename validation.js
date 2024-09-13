@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function validateAge(birthdate) {
   const birthDate = new Date(birthdate);
   const today = new Date();
-  const age = today.getFullYear() - birthDate.getFullYear();
+  let age = today.getFullYear() - birthDate.getFullYear();
   const monthDifference = today.getMonth() - birthDate.getMonth();
   if (monthDifference < 0 || (monthDifference === 0 && today.getDate() < birthDate.getDate())) {
     age--;
